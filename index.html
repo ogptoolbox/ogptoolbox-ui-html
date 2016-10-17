@@ -38,7 +38,7 @@
         <a class="navbar-brand" href="#">OGPtoolbox</a><p class="navbar-text">tools and use cases for open government</p>
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Log In</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#connection">Log In</a></li>
         <button type="button" class="btn btn-default btn-action">Add new</button>
       </ul>
     </div>
@@ -115,14 +115,11 @@
               <div class="row filters">
                 <div class="col-md-12 text-center">
                   Showing results suited for
-                  <div class="dropdown dropdown-filter dropup">
+                  <!-- <div class="dropdown dropdown-filter dropup"> -->
                     <a class="btn btn-default dropdown-toggle" href="#carousel-example-generic" role="button" data-slide-to="2">
-
-
                       all organizations
-                      <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                       <li><a href="#">all organizations</a></li>
                       <li><a href="#">Local government</a></li>
                       <li><a href="#">Regional government</a></li>
@@ -132,22 +129,21 @@
                       <li><a href="#">Non-profit organization</a></li>
                       <li><a href="#">For-profit organization</a></li>
 
-                    </ul>
-                  </div>
+                    </ul> -->
+                  <!-- </div> -->
                   and available in 
-                  <div class="dropdown dropdown-filter dropup">
+                  <!-- <div class="dropdown dropdown-filter dropup"> -->
                     <a class="btn btn-default dropdown-toggle" href="#carousel-example-generic" role="button" data-slide-to="3">
                       English
-                      <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    </a>
+                    <!-- ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                       <li><a href="#">Français</a></li>
                       <li><a href="#">Espanol</a></li>
                       <li><a href="#">Deutsch</a></li>
                       <li><a href="#">Italiano</a></li>
 
-                    </ul>
-                  </div>
+                    </ul> -->
+                  <!-- </div> -->
                 </div>
               </div>
               
@@ -638,12 +634,74 @@
     </div>
   </footer>
 
-</div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</div>
+
+
+
+<div class="modal fade" id="connection" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div id="login-overlay" class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">Login to contribute</h4>
+          </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-xs-6">
+                      <div class="well">
+                          <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+                              <div class="form-group">
+                                  <label for="username" class="control-label">Email</label>
+                                  <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
+                                  <span class="help-block"></span>
+                              </div>
+                              <div class="form-group">
+                                  <label for="password" class="control-label">Password</label>
+                                  <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
+                                  <span class="help-block"></span>
+                              </div>
+                              <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
+                              <div class="checkbox">
+                                  <label>
+                                      <input type="checkbox" name="remember" id="remember"> Remember login
+                                  </label>
+                              </div>
+                              <button type="submit" class="btn btn-block btn-default grey">Login</button>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="col-xs-6">
+                      <p class="lead">Create your account now</p>
+                      <ul class="list-unstyled" style="line-height: 2">
+                        <li><span class="fa fa-check text-success"></span> Improve existing content</li>
+                        <li><span class="fa fa-check text-success"></span> Vote the best contributions</li>
+                          <li><span class="fa fa-check text-success"></span> Add a new tool or usage</li>
+                          <li><span class="fa fa-check text-success"></span> Create a page for your organization </li>
+                          
+                          <li><a href="/read-more/"><u>Read more</u></a></li>
+                      </ul>
+                      <p><a href="/new-customer/" class="btn btn-block btn-default ">Register now!</a></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+ <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
 <script src="js/vendor/bootstrap.min.js"></script>
 
-<script src="js/main.js"></script>
+<script src="js/main.js">
+<script src="js/main.js">
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+</script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
