@@ -1,4 +1,5 @@
 // VARIABLES
+@lighter: #53585c;
 @dark: #3f454a;
 @darker: #33383c;
 @darkest: #25282b;
@@ -99,7 +100,7 @@ a {
 
 ul.nav.nav-pills {
     width: 100%;
-    border: 1px solid grey;
+    border: 1px solid lighten(@lighter, 10%);
     border-radius: 4px;
     margin: 30px 0 25px;
 
@@ -107,7 +108,7 @@ ul.nav.nav-pills {
 
         &.active {
             a {
-                background: grey;
+                background: lighten(@lighter, 10%);
                 color: white;
 
                 .badge {
@@ -116,16 +117,17 @@ ul.nav.nav-pills {
                 }
             }
             &:hover a {
-                background: lighten(grey, 10%)
+                background: lighten(@lighter, 20%);
+                border-left: 1px lighten(@lighter, 20%) solid;
             }
         }
 
         &>a {
             padding: 4px 15px;
             border-radius: 0px;
-            color: grey;
-            border-left: 1px grey solid;
-            border-right: 1px grey solid;
+            color: @lighter;
+            border-left: 1px lighten(@lighter, 10%) solid;
+            border-right: 1px lighten(@lighter, 10%) solid;
 
             &:last-of-type {
                 border-right: none;
@@ -378,12 +380,11 @@ ol.breadcrumb {
     border: none;
     border-radius: 3px;
     background-image: none;
-    background-color: #53585c;
+    background-color: @lighter;
     color: white;
     text-shadow: none;
     text-align: left;
     box-shadow: none;
-    font-weight: 300px;
     font-size: 14px;
     margin: 0 4px;
     padding: 5px 8px;
