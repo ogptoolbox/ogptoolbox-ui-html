@@ -84,6 +84,23 @@ a {
             border-color: #2590ff;
         } 
     }
+    &.btn-action2     {
+        border: 2px solid @light-blue;
+        color: white;
+        background: @light-blue;
+        font-size: 14px;
+        padding: 5px 30px;
+        text-shadow: none;
+        border-radius: 3px;
+        width: 95%;
+        margin-top: 10px;
+
+        &:hover     {
+            color: white;
+            background: #2590ff;
+            border-color: #2590ff;
+        } 
+    }
 
 }
 
@@ -373,6 +390,12 @@ ol.breadcrumb {
             opacity: 0.6;
             width: 100%;
         }
+    }
+    &.collection-header-mini {
+        margin-bottom: 0px;
+        height: 220px;
+        background-color: @dark;
+        overflow: hidden;
     }
 }
 
@@ -1176,5 +1199,91 @@ body.fullscreen, html, .main-container {
     width:100%;
     padding: 10px 20px;
     bottom: 0;
+}
+
+
+
+//COLLECTION
+
+.full-bg {
+
+    position: relative;
+
+    img.cover {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto 0;
+        opacity: .5;
+        width: 100%;
+
+    }
+
+}
+
+.collection-header-mini .breadcrumb {
+    margin-top: -6px;
+
+    li {
+            color: white;
+    }
+}
+
+.collection-info {
+
+    margin-top: 50px;
+
+    .collection-thumb {
+        float: left;
+        height: 100px;
+        width: 100px;
+        display: block;
+        background: white;
+        position: relative;
+        color: white;
+
+        img {
+            height: auto;
+            width: auto;
+            max-height: 80%;
+            max-width: 80%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+        }
+
+
+    }
+
+    h4, h3, h2 {
+            text-align: left;
+            padding-left: 120px;
+            color: white;
+        }
+        h4 {
+    font-size: 14px;
+    padding-top: 5px;
+    }
+    h2 {
+    font-size: 52px;
+    margin-top: -10px;
+    font-weight: 300;
+    }
+    h3 {
+    font-size: 17px;
+    margin-top: -8px;
+    font-weight: 300;
+        a {
+            color: white;
+            font-weight: 400;
+        }
+    }
+
 }
 
