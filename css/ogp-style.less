@@ -443,7 +443,7 @@ ol.breadcrumb {
             margin: 6px 0;
             font-size: 12px;
             a {
-                color: @mid-grey;
+                color: #858585;
             }
         }
     }
@@ -454,12 +454,12 @@ ol.breadcrumb {
     .copyright  {
         margin-top: 80px;
         font-size: 10px;
-        color: @mid-grey;
+        color: #858585;
     }
 }
 
 p.info-box  {
-    color: @mid-grey;
+    color: #858585;
     padding-right: 60px;
     font-size: 12px;
     margin-bottom: 60px;
@@ -503,7 +503,7 @@ p.info-box  {
         }
     }
     h1 {
-        font-size: 46px;
+        font-size: 50px;
         font-weight: 300;
         margin-top: 5px;
         small {
@@ -526,6 +526,27 @@ p.info-box  {
     box-shadow: none;
     padding: 0;
     margin: 32px 0;
+
+    .btn-default.btn-action {
+        border: 1px solid #a7a7a7;
+        padding: 1px 10px;
+        color: grey;
+        font-size: 11px;
+        background: none;
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+        margin-top: 0px;
+        &:hover {
+            color: white;
+            background: #a7a7a7;
+        }
+        &.btn-block {
+            margin-top: 10px;
+            padding: 3px 10px;
+        }
+    }
+
 }
 .panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body {
     border-top: none;
@@ -568,23 +589,6 @@ p.info-box  {
         top: 2px;
     }
 
-    .btn-default.btn-action {
-        border: 1px solid #a7a7a7;
-        padding: 1px 10px;
-        color: grey;
-        font-size: 11px;
-        background: none;
-        background-image: none;
-        box-shadow: none;
-        text-shadow: none;
-        margin-top: 0px;
-        margin-left: 10px;
-        &:hover {
-            color: white;
-            background: #a7a7a7;
-        }
-    }
-
 }
 
 .label-tag {
@@ -592,17 +596,31 @@ p.info-box  {
     border: 1px solid #ddd;
     color: grey;
     margin-right: 1px;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
     font-weight: normal;
     border-radius: 30px;
     padding: 4px 10px;
     display: inline-block;
+
+    &.label-maintag {
+        border-radius: 3px;
+        padding: 4px 14px;
+        margin-right: 3px;
+        font-size: 12px;
+    }
+
     :hover {
         background-color: #a7a7a7;
         border: 1px solid #a7a7a7;
         color: white;
         cursor: pointer;
     }
+}
+
+.label-small {
+    font-size: 11px !important;
+    font-weight: 300;
+    color: #444;
 }
 
 .panel.panel-default.up20 {
@@ -974,9 +992,10 @@ table {
         border: 1px solid;
         font-size: 12px;
         padding: 4px 20px;
+        margin: auto;
         margin-top: 4px;
         margin-bottom: 5px;
-        width: 80%;
+        width: 90%;
     }
 }
 .tool-icon-small {
