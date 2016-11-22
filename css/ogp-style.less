@@ -821,7 +821,7 @@ h4.zone-label {
        background: white;
        float: right;
        position: absolute;
-       right: 25px;
+       right: 15px;
        top: 111px;
        text-align: center;
 
@@ -840,42 +840,51 @@ h4.zone-label {
 
 .caption {
 
-    padding: 12px 12px 17px;
+    padding: 12px 12px 20px;
+    max-height: 90px;
+    min-height: 90px;
+    height: 90px;
+        overflow: hidden;
 
     h4 {
         font-size: 15px;
-        margin: 3px 0 8px;
+        margin: 3px 0 9px;
     }
 
     p   {
         font-size: 12px;
         line-height: 1.4em;
-        max-height: 48px;
-        min-height: 48px;
-        height: 48px;
-        overflow: hidden;
-        margin-bottom: 20px;
+        
+       
         padding: 0px;
-    }
-    .label-tool {
-        background-color: transparent;
-        border: 1px solid #ddd;
-        color: grey;
-        margin-right: 3px;
-        font-weight: normal;
-        border-radius: 2px;
-        padding: 2px 6px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #a7a7a7;
-            border: 1px solid #a7a7a7;
-            color: white;
-
-        }
+        margin-bottom: 0px;
     }
 
 }
+
+.tags {
+
+    padding: 15px 12px 13px;
+
+    .label-tool {
+            background-color: transparent;
+            border: 1px solid #ddd;
+            color: grey;
+            margin-right: 4px;
+            font-weight: normal;
+            border-radius: 2px;
+            padding: 2px 6px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #a7a7a7;
+                border: 1px solid #a7a7a7;
+                color: white;
+
+            }
+        }
+}
+
 .table>tbody>tr>td, .thumbnail .table>tbody>tr>th, .thumbnail .table>tfoot>tr>td, .thumbnail .table>tfoot>tr>th, .thumbnail .table>thead>tr>td, .thumbnail .table>thead>tr>th {
     padding: 8px 6px;
     line-height: 1.5;
@@ -1428,4 +1437,9 @@ body, html, #main, .main-container {
         background: rgba(0, 0, 0, 0.2);
     }
 
+}
+
+
+.example h4 {
+    padding-right: 70px !important;
 }
