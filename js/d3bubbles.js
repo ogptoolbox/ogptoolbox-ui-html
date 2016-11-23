@@ -182,6 +182,9 @@ D3Bubbles = function(params) {
                 });
         }
 
+
+
+
         // ---
         // The force variable is the force layout controlling the bubbles
         // here we disable gravity and charge as we implement custom versions
@@ -204,32 +207,51 @@ D3Bubbles = function(params) {
             .append('g')
             .attr('data-label-text', function(d){ return d.name })
             .attr('data-label-count', function(d){ return d.label })
-            .attr('id', function(d){ return 'bubble-wrapper-'+d.id })
+            .attr('id', function(d){ return 'bubble-wrapper-'+d.type })
             .attr('class', 'bubble-wrapper')
             .attr('cx', function(d){ return d.cx })
             .attr('cy', function(d){ return d.cy })
-            .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; });
+            .on("click", function(d) { 
+                if (d.type == "selected") {
+                    alert("annuller la selection et recharger les data")
+                } else 
+                if (d.type == "main") {
+                } else {
+                    alert("selectionner ce tag et recharger les data")
+                }
+                })
+
+
+            .attr('transform', function(d) { 
+
+                if (d.type == "main") {
+                    return 'translate(' + $(settings.container).width()/2 + ',' + $(settings.container).height()/2 + ')'
+                } else {
+                    return 'translate(' + d.x + ',' + d.y + ')'
+                }
+
+                });
+
             // .call(drag);
 
             if( that.features_dragmove ){
                 circles.call(drag);
             }
 
-
-         // DRAW CENTRAL CIRCLE
-            // circles2 = svgContainer
-            // .append('g')
-            // .attr('cx', 200)
-            // .attr('cy', 200)
-            // .attr('class', 'main-bubble')
-            // .append('circle')
-            // .attr('fill', '#fff')
-            // .attr('r', 150)
-            // .attr('transform', 'translate(' + $(settings.container).width()/2 + ',' + $(settings.container).height()/2 + ')');
-
         // ---
         // Add our Circle
         // ---
+
+        // circles2 = svgContainer
+        //     .append('g')
+        //     .attr('cx', 200)
+        //     .attr('cy', 200)
+        //     .attr('class', 'main-bubble')
+        //     .attr('transform', 'translate(' + $(settings.container).width()/2 + ',' + $(settings.container).height()/2 + ')')
+        //     .append('circle')
+        //     .attr('fill', '#fff')
+        //     .attr('r', 200);
+            
         
 
         var circle = circles
@@ -240,6 +262,29 @@ D3Bubbles = function(params) {
             .attr('fill', function(d){ return bubbles_colors(d.radius) })
             .attr('r', function(d){ return d.radius });
 
+
+
+        // circles2 = svgContainer
+        //     .append('g')
+        //     .attr('class', 'bubble-wrapper')
+        //     .attr('cx', 200)
+        //     .attr('cy', 200)
+        //     .attr('transform', 'translate(' + $(settings.container).width()/2 + ',' + $(settings.container).height()/2 + ')')
+        //     // .call(drag);
+
+        //     if( that.features_dragmove ){
+        //         circles2.call(drag);
+        //     }
+
+        // var circle2 = circles2
+        //     .append('circle')
+        //     .attr('class', 'main-bubble')
+        //     .attr('fill', '#fff')
+        //     .attr('r', 200);
+
+
+
+
         // ---
         // Add text
         // ---
@@ -249,57 +294,23 @@ D3Bubbles = function(params) {
             .attr('dy', '.3em')
             .attr('fill', function(d){ return texts_colors(d.radius) })
             .style('text-anchor', 'middle')
-            .text(function(d) {
-                var ref = this;
-                var container = document.querySelector(settings.wrapper);
+            .text(function(d) { return d.name; });
 
-                // Callback event after rendering a bubble
-                drawed++;
-
-                // Add Event mouseover
-                ref.addEventListener("mouseleave", function(){
-                    // definition of events
-                    var event = new CustomEvent('leave', {
-                        bubble: ref,
-                        data: d,
-                    });
-                    !container.dispatchEvent(event);
-                });
-
-                // Add Event mouseout
-                ref.addEventListener("mouseenter", function(){
-                    // definition of events
-                    var event = new CustomEvent('enter', {
-                        bubble: ref,
-                        data: d,
-                    });
-                    !container.dispatchEvent(event);
-                });
-
-                // Event after rendering all bubbles
-                if( drawed >= that.bubbles_max ){
-                    // definition of events
-                    var event = new CustomEvent('complete');
-                    !container.dispatchEvent(event);
+        var text2 = circles
+            .append('text')
+            .attr('class', 'label')
+            .attr('dy', '4em')
+            .attr('fill', '#ffffff')
+            .style('text-anchor', 'middle')
+            .text(function(d) { 
+                if (d.type == "main") {
+                    return 'Clic on a keyword to start'
+                } else 
+                if (d.type == "selected") {
+                    return 'Cancel'
                 }
 
-                return d.name.substring(0, d.radius / 3);
-            })
-            // LEAVE TEXT SIZE TO CSS
-
-            // .style('font-size', '10px')
-            // .style('font-size', function(d) {
-            //     var size = 13;
-            //     if(that.features_fit_texts){
-            //         //This is what gives it increased size of text
-            //         size = (2 * d.radius - 10) / this.getComputedTextLength() * 10 ;
-            //     }
-            //     return size+ 'px';
-            // });
-
-
-
-
+            });
 
     }
 
@@ -496,7 +507,7 @@ D3Bubbles = function(params) {
                     var l = Math.sqrt(x * x + y * y);
                     var r = d.radius + quad.point.radius;
                     if (l < r) {
-                        l = (l - r) / l * alpha * 0.5;
+                        l = (l - r) / l * alpha * 0.6;
                         d.x -= x *= l;
                         d.y -= y *= l;
                         quad.point.x += x;

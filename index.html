@@ -15,6 +15,7 @@
 
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/bubbles.css">
 
   <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
@@ -90,23 +91,15 @@
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner " role="listbox">
-        <div class="item active">
-          <div class="jumbotron">
-            <div class="container">
-             <h1>Find digital tools<br> 
-              to improve democracy</h1>
-              <a class="btn btn-primary btn-lg" href="#carousel-example-generic" role="button" data-slide-to="1">Start browsing</a></p>
-              </div>
-            </div>
-            <div class="carousel-caption"> 
-            </div>
-          </div>
-          <div class="item text-center">
+        
+          <div class="item active text-center">
 
-            <div class="container">
+            <div class="container-fluid">
               <div class="row">
                 <div class="col-md-12 text-center">
-                  <img src="img/bubbles.png"></img>
+                  <div id="tag">
+                <div class="plot"></div>
+    </div>
                 </div>
 
               </div>
@@ -114,7 +107,7 @@
                 <div class="col-md-12 text-center">
                   Showing results suited for
                   <!-- <div class="dropdown dropdown-filter dropup"> -->
-                    <a class="btn btn-default dropdown-toggle" href="#carousel-example-generic" role="button" data-slide-to="2">
+                    <a class="btn btn-default dropdown-toggle" href="#carousel-example-generic" role="button" data-slide-to="1">
                       all organizations
                     </a>
                     <!-- <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -131,7 +124,7 @@
                   <!-- </div> -->
                   and available in 
                   <!-- <div class="dropdown dropdown-filter dropup"> -->
-                    <a class="btn btn-default dropdown-toggle" href="#carousel-example-generic" role="button" data-slide-to="3">
+                    <a class="btn btn-default dropdown-toggle" href="#carousel-example-generic" role="button" data-slide-to="2">
                       English
                     </a>
                     <!-- ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -223,7 +216,7 @@
               </div>
 
               <div class="row">
-                <div class="col-md-12 text-center"><a class="btn btn-primary btn-lg" href="#carousel-example-generic" role="button" data-slide-to="1">Continue</a></p></div>
+                <div class="col-md-12 text-center"><a class="btn btn-primary btn-lg" href="#carousel-example-generic" role="button" data-slide-to="0">Continue</a></p></div>
               </div>
             </div>
           </div>
@@ -302,7 +295,7 @@
               </div>
 
               <div class="row">
-                <div class="col-md-12 text-center"><a class="btn btn-primary btn-lg" href="#carousel-example-generic" role="button" data-slide-to="1">Continue</a></p></div>
+                <div class="col-md-12 text-center"><a class="btn btn-primary btn-lg" href="#carousel-example-generic" role="button" data-slide-to="0">Continue</a></p></div>
               </div>
             </div>
           </div>
@@ -789,12 +782,82 @@
 
 <script src="js/vendor/bootstrap.min.js"></script>
 
-<script src="js/main.js">
-<script src="js/main.js">
+<script src="js/main.js"></script>
+<script>
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').focus()
 })
 </script>
+
+<!-- TAG BUBBLES -->
+    <!-- jQuery 1.11.0 -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <!-- D3.js v3 -->
+    <script src="js/d3.v3.min.js" charset="utf-8"></script>
+    <!-- D3Bubbles libraries -->
+    <script src="js/d3bubbles.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+
+        var data_plot_1 = [
+        {name: "Open government", radius: 150, type:"main"},
+        {name: "Data-visualization", radius: 87
+        // , type:"selected"
+      },
+        {name: "Petitions", radius: 80},
+        {name: "Consultation", radius: 60},
+        {name: "Law-making", radius: 57},
+        {name: "Budget", radius: 55},
+        {name: "Debate", radius: 54},
+        {name: "Reporting", radius: 50},
+        {name: "Deliberation", radius: 40},
+        {name: "Collaborative", radius: 38},
+        {name: "Mobilizing", radius: 35},
+        {name: "Crowdfunding", radius: 50},
+        {name: "Information", radius: 52},
+        {name: "Proposal Making", radius: 39},
+        {name: "Mapping", radius: 47},
+        {name: "Transparency", radius: 50},
+        {name: "Voting", radius: 37},
+        {name: "Polling", radius: 20},
+        ];
+
+        var tagcloud = new D3Bubbles({
+            width: 'auto',
+            height: 490,
+            wrapper: '#tag',
+            container: '#tag .plot',
+            data: data_plot_1,
+            bubbles: {
+                bubbles_per_px: 0.02,
+                bubbles_max: false,
+            },
+            radius: {
+                min:30,
+                max:180
+            },
+            colors: {
+                bubbles:['#656a6e', '#4cc7c8'],
+                texts:['#ffffff'],
+            },
+            features: {
+                dragmove: false,
+                overflow: false,
+                fit_texts: false,
+                responsive:true,
+            },
+        });
+        tagcloud.init();
+        tagcloud.visualize();
+
+
+        $( window ).resize(function() {
+          tagcloud.redraw();
+          });
+        };
+
+    
+    </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
