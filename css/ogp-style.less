@@ -76,7 +76,7 @@ a {
         background: none;
         padding: 5px 20px;
         margin-top: 21px;
-        text-shadow: none;
+        text-shadow: none;  
         border-radius: 3px;
 
         &:hover     {
@@ -775,6 +775,20 @@ h4.zone-label {
 
         .visual     {
             border-bottom: 1px solid #e8e8e8;
+
+            h1.dynamic {
+            font-size: 60px;
+            line-height: 95px;
+            color: #cdcdcd;
+            font-weight: 300;
+            display: table-cell;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            vertical-align: middle;
+            }
         }
         &.grey     {
             background: @light-grey;
@@ -799,6 +813,27 @@ h4.zone-label {
         }
     }
 
+    &.example {
+
+        h1.dynamic {
+            font-size: 18px;
+            line-height: 135px;
+            color: #f6f6f6;
+            background: #d8d8d8;
+            font-weight: 300;
+            height: auto;
+            width: auto;
+            display: table-cell;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            }
+
+    }
+
     .visual     {
         height: 140px;
         display: block;
@@ -807,6 +842,7 @@ h4.zone-label {
         vertical-align: middle;
         text-align: center;
         background: black;
+        position: relative;
         img     {
             width: 100%;
             opacity: 0.9;
