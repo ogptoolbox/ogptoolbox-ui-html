@@ -336,9 +336,9 @@ nav.navbar.navbar-inverse {
     }
 
     input[type=radio], input[type=checkbox] {
-       position: absolute;
-       top: -9999px;
-       left: -9999px;
+     position: absolute;
+     top: -9999px;
+     left: -9999px;
 /* For mobile, it's typically better to position checkbox on top of clickable
 area and turn opacity to 0 instead. */
 }
@@ -770,24 +770,24 @@ h4.zone-label {
     &.tool  {
         background: white;
         box-shadow: none;
-        border: none;
+        border-size: 0;
         border-radius: 0px;
 
         .visual     {
             border-bottom: 1px solid #e8e8e8;
 
             h1.dynamic {
-            font-size: 60px;
-            line-height: 95px;
-            color: #cdcdcd;
-            font-weight: 300;
-            display: table-cell;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            vertical-align: middle;
+                font-size: 60px;
+                line-height: 95px;
+                color: #cdcdcd;
+                font-weight: 300;
+                display: table-cell;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                vertical-align: middle;
             }
         }
         &.grey     {
@@ -817,7 +817,7 @@ h4.zone-label {
 
         h1.dynamic {
             font-size: 18px;
-            line-height: 135px;
+            line-height: 138px;
             color: #f6f6f6;
             background: #d8d8d8;
             font-weight: 300;
@@ -830,8 +830,75 @@ h4.zone-label {
             left: 0;
             right: 0;
             bottom: 0;
+        }
+
+    }
+
+    &.collection   {
+        height: 185px;
+        border-radius: 6px;
+        box-shadow: none;
+        border: none;
+        overflow: hidden;
+
+        &:hover {
+
+            .visual img     {
+                opacity: 0.8;
             }
 
+        }
+
+        .visual     {
+            height: 100%;
+            display: block;
+            overflow: hidden;
+            background: #25282b;
+            position: relative;
+            img     {
+                height: 120%;
+                width: auto;
+                position: absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                opacity: 0.5;
+            }   
+        }
+        .caption {
+            color: white;
+            margin-top: -184px;
+            z-index: 1000;
+            position: relative;
+            max-height: 160px;
+            height: 160px;
+            padding: 18px;
+            margin-bottom: 0;
+
+            h4 {
+                font-size: 22px;
+                line-height: 1em;
+            }
+            .example-author {
+                font-size: 12px;
+                margin-bottom: 7px;
+                margin-top: -1px;
+                line-height: 12px;
+                img {
+                    max-width: 23px;
+                    max-height: 15px;
+                    margin-right: 4px;
+                    background: white;
+                    padding: 1px;
+                    margin-top: -2px;
+                }
+            }
+            p {
+                margin-top: 30px;
+            }
+        }
     }
 
     .visual     {
@@ -851,17 +918,17 @@ h4.zone-label {
 
 
     .example-author-thumb   {
-       height: 54px;
-       width: 54px;
-       border: 1px solid #e8e8e8;
-       background: white;
-       float: right;
-       position: absolute;
-       right: 15px;
-       top: 111px;
-       text-align: center;
+     height: 54px;
+     width: 54px;
+     border: 1px solid #e8e8e8;
+     background: white;
+     float: right;
+     position: absolute;
+     right: 15px;
+     top: 111px;
+     text-align: center;
 
-       img   {
+     img   {
         width: 85%;
         position: absolute;
         margin: auto;
@@ -880,7 +947,7 @@ h4.zone-label {
     max-height: 90px;
     min-height: 90px;
     height: 90px;
-        overflow: hidden;
+    overflow: hidden;
 
     h4 {
         font-size: 15px;
@@ -890,10 +957,13 @@ h4.zone-label {
     p   {
         font-size: 12px;
         line-height: 1.4em;
-        
-       
         padding: 0px;
         margin-bottom: 0px;
+
+        &.call {
+            font-style: italic;
+            color: grey;
+        }
     }
 
 }
@@ -903,22 +973,22 @@ h4.zone-label {
     padding: 15px 12px 13px;
 
     .label-tool {
-            background-color: transparent;
-            border: 1px solid #ddd;
-            color: grey;
-            margin-right: 4px;
-            font-weight: normal;
-            border-radius: 2px;
-            padding: 2px 6px;
-            cursor: pointer;
+        background-color: transparent;
+        border: 1px solid #ddd;
+        color: grey;
+        margin-right: 4px;
+        font-weight: normal;
+        border-radius: 2px;
+        padding: 2px 6px;
+        cursor: pointer;
 
-            &:hover {
-                background-color: #a7a7a7;
-                border: 1px solid #a7a7a7;
-                color: white;
+        &:hover {
+            background-color: #a7a7a7;
+            border: 1px solid #a7a7a7;
+            color: white;
 
-            }
         }
+    }
 }
 
 .table>tbody>tr>td, .thumbnail .table>tbody>tr>th, .thumbnail .table>tfoot>tr>td, .thumbnail .table>tfoot>tr>th, .thumbnail .table>thead>tr>td, .thumbnail .table>thead>tr>th {
@@ -1078,10 +1148,10 @@ a.show-more {
 .panel-side {
 
     h6.panel-title {
-     font-weight: 600;
-     font-size: 13px;
- }
- .panel-body {
+       font-weight: 600;
+       font-size: 13px;
+   }
+   .panel-body {
     padding: 5px 0;
     margin: 0px;
 }
@@ -1317,11 +1387,11 @@ body, html, #main, .main-container {
         max-width: 104%;
         max-height: 100%;
         position: absolute;
-            
-            top: -6px;
-            left: -20px;
-            right: -20px;
-            bottom: 0;
+
+        top: -6px;
+        left: -20px;
+        right: -20px;
+        bottom: 0;
     }
 
     .row.filters {
@@ -1374,7 +1444,7 @@ body, html, #main, .main-container {
     margin-top: -6px;
 
     li {
-            color: white;
+        color: white;
     }
 }
 
@@ -1409,23 +1479,23 @@ body, html, #main, .main-container {
     }
 
     h4, h3, h2 {
-            text-align: left;
-            padding-left: 120px;
-            color: white;
-        }
-        h4 {
-    font-size: 14px;
-    padding-top: 5px;
+        text-align: left;
+        padding-left: 120px;
+        color: white;
+    }
+    h4 {
+        font-size: 14px;
+        padding-top: 5px;
     }
     h2 {
-    font-size: 52px;
-    margin-top: -10px;
-    font-weight: 300;
+        font-size: 52px;
+        margin-top: -10px;
+        font-weight: 300;
     }
     h3 {
-    font-size: 17px;
-    margin-top: -8px;
-    font-weight: 300;
+        font-size: 17px;
+        margin-top: -8px;
+        font-weight: 300;
         a {
             color: white;
             font-weight: 400;
@@ -1444,8 +1514,8 @@ body, html, #main, .main-container {
     }
 
     .form-group {
-    margin: 20px 0 0;
-}
+        margin: 20px 0 0;
+    }
 
 }
 
@@ -1463,12 +1533,12 @@ body, html, #main, .main-container {
     padding: 50px;
 
     .glyphicon {
-    font-size: 61px;
-    margin: auto;
-    display: block;
-}
+        font-size: 61px;
+        margin: auto;
+        display: block;
+    }
 
-&:hover {
+    &:hover {
         color: rgba(0, 0, 0, 0.5);
         background: rgba(0, 0, 0, 0.2);
     }
