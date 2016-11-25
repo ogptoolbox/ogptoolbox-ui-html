@@ -615,13 +615,13 @@ p.info-box  {
 }
 
 .panel-body {
-    padding: 9px 0;
+    padding: 0;
 
     &.simple {
         padding-top: 2px;
     }
     p {
-        padding: 0;
+        padding: 9px 0;
         line-height: 1.6em;
     }
 }
@@ -1070,7 +1070,10 @@ a.show-more {
         }
         .caption {
             padding: 0px;
-            padding-left: 176px;
+            padding-left: 15px;
+            height: 72px;
+            min-height: 72px;
+            max-height: 72px;
 
             h4 {
                 margin: 0px 0 4px;
@@ -1099,6 +1102,13 @@ a.show-more {
                 margin-bottom: 7px;
                 line-height: 1.3em;
             }
+        }
+
+        .tags { 
+            padding-left: 15px;
+            overflow: hidden;
+            padding-bottom: 0px;
+            padding-top: 8px;
         }
     }
 
