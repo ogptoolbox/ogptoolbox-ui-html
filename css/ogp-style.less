@@ -972,23 +972,6 @@ h4.zone-label {
 
     padding: 15px 12px 13px;
 
-    .label-tool {
-        background-color: transparent;
-        border: 1px solid #ddd;
-        color: grey;
-        margin-right: 4px;
-        font-weight: normal;
-        border-radius: 2px;
-        padding: 2px 6px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #a7a7a7;
-            border: 1px solid #a7a7a7;
-            color: white;
-
-        }
-    }
 }
 
 .table>tbody>tr>td, .thumbnail .table>tbody>tr>th, .thumbnail .table>tfoot>tr>td, .thumbnail .table>tfoot>tr>th, .thumbnail .table>thead>tr>td, .thumbnail .table>thead>tr>th {
@@ -1026,6 +1009,23 @@ a.show-more {
     }
 }
 
+.label-tool {
+        background-color: transparent;
+        border: 1px solid #ddd;
+        color: grey;
+        margin-right: 4px;
+        font-weight: normal;
+        border-radius: 2px;
+        padding: 2px 6px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #a7a7a7;
+            border: 1px solid #a7a7a7;
+            color: white;
+
+        }
+    }
 
 //SHOW THUMBNAILS IN A LIST INSTEAD OF GRID
 .list {
@@ -1560,4 +1560,65 @@ body, html, #main, .main-container {
 
 .example h4 {
     padding-right: 70px !important;
+}
+
+
+// COMPARE TABLE
+
+table.compare {
+    margin-top: 40px;
+    margin-bottom: 80px;
+
+//     &.table-striped>tbody>tr>td:nth-of-type(even) {
+//     background-color: rgba(0, 0, 0, 0);
+// }
+// &.table-striped>tbody>tr>td:nth-of-type(odd) {
+//     background-color: rgba(0, 0, 0, 0.02);
+// }
+&.table-striped>tbody>tr>td {
+    border-left: 2px solid white ;
+}
+   &.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: white;
+}
+&.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f7f7f7;
+}
+
+    &>tbody>tr>td {
+        padding-left: 10px;
+        text-align: center;
+    }
+    &>tbody>tr>th {
+        padding-right: 20px;
+        padding-left: 8px;
+    }
+    &>thead>tr>th {
+        padding-left: 10px;
+        text-align: center;
+        padding-bottom: 20px;
+        vertical-align: middle;
+        display: table-cell;
+        height: 60px;
+
+    }
+    img {
+        height: auto;
+        width: auto;
+        max-height: 40px;
+        max-width: 80px;
+        margin-right: 5px;
+    }
+    .btn.btn-default.btn-action {
+    border: 1px solid #25b5ff;
+    color: #25b5ff;
+    padding: 3px 10px;
+    margin-top: 0px;
+    font-size: 12px;
+
+    &:hover {
+        color: white;
+    }
+    }
+
 }
