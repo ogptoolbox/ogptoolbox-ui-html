@@ -530,6 +530,8 @@ p.info-box  {
 // MAIN CONTENT 
 .content    {
 
+    min-height: 700px;
+
     .metrics {
         margin: 30px 0px 0;
         h3 {
@@ -1027,6 +1029,51 @@ a.show-more {
         }
     }
 
+.call-add {
+        font-size: 9px;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 1px solid #ddd;
+        color: grey;
+        font-weight: normal;
+        border-radius: 2px;
+        padding: 4px 10px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #a7a7a7;
+            border: 1px solid #a7a7a7;
+            color: white;
+
+        }
+}
+
+.call-container {
+
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 10px;
+
+    p { 
+        text-align: center;
+        margin: 20px 0 15px;
+    }
+
+}
+
+.visual .call-container {
+
+    position: absolute;
+    top: 75px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    vertical-align: middle;
+    display: table-cell;
+
+}
+
 //SHOW THUMBNAILS IN A LIST INSTEAD OF GRID
 .list {
     margin-bottom: 20px;
@@ -1185,7 +1232,7 @@ table {
 
 .sidebar .thumbnail .caption {
 
-    padding: 12px 0px 17px;
+    padding: 12px 0px 8px;
     max-height: 100%;
     height: auto;
 
