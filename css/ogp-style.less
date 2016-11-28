@@ -530,7 +530,9 @@ p.info-box  {
 // MAIN CONTENT 
 .content    {
 
-    min-height: 700px;
+    &.min {
+        min-height: 700px;
+    }
 
     .metrics {
         margin: 30px 0px 0;
@@ -1355,6 +1357,38 @@ table {
         padding: 17px 23px;
         border-bottom: 1px solid @line-grey;
         margin-top: 0px;
+
+        &.action {
+             padding: 17px 23px;
+            border: none;
+            margin-top: 0;
+            margin: 10px;
+            background: #e0e0e0;
+            min-height: 90px;
+            padding-left: 0px;
+            display: block;
+            color: @dark-grey;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: none;
+                background: #d1d1d1;
+            }
+
+            .media-body h4.media-heading {
+                font-size: 16px
+            }
+
+            .icon {
+                height: 40px;
+                font-size: 30px;
+                line-height: 40px;
+                text-align: center;
+                padding: 6px 40px;
+                margin: 0;
+                color: #878f95;
+            }
+        }
 
         .media-body {
             font-size: 12px;
