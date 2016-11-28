@@ -808,6 +808,14 @@ h4.zone-label {
         }
         &.grey     {
             background: @light-grey;
+
+            &:hover {
+                background-color: darken(@light-grey, 3%);
+                .visual {
+                border-color: darken(@light-grey, 3%);
+                }
+            }
+
             .visual     {
                 border: 3px solid @light-grey;
             }
