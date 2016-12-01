@@ -668,9 +668,19 @@ p.info-box  {
 
     &.label-maintag {
         border-radius: 3px;
-        padding: 4px 14px;
+        padding: 4px 10px;
         margin-right: 3px;
         font-size: 12px;
+    }
+    & .label-language {
+        background: none;
+        color: #a7a7a7;
+        padding: 0;
+        margin: 0 5px 0 0;
+        font-style: normal;
+        border: none;
+        top: 0px;
+        font-size: 80% !important;
     }
 
     :hover {
@@ -685,6 +695,19 @@ p.info-box  {
     font-size: 11px !important;
     font-weight: 300;
     color: #444;
+}
+.label-language {
+    border-radius: 2px;
+    border: 1px solid #a7a7a7; 
+    padding: 1px 3px;
+    margin: 0 5px 0 0;
+    font-size: 9px !important;
+    text-transform: uppercase;
+    color: #a7a7a7;
+    font-style: normal;
+    position: relative;
+    top: -1px;
+
 }
 
 .panel.panel-default.up20 {
@@ -1098,6 +1121,10 @@ a.show-more {
     vertical-align: middle;
     display: table-cell;
 
+}
+
+.to-translate {
+        font-style: italic;
 }
 
 //SHOW THUMBNAILS IN A LIST INSTEAD OF GRID
