@@ -133,16 +133,19 @@ a {
 
 .row.fixed {
     position: fixed;
-    z-index: 1000;
+    left: 50%;
+    right: 0;
+    padding: 0 22px;
+    margin: 0;
+    z-index: 100000;
     background: white;
-    padding-right: 30px;
 }
 
 ul.nav.nav-pills {
     width: 100%;
     border: 1px solid lighten(@lighter, 10%);
     border-radius: 4px;
-    margin: 30px 0 25px;
+    margin: 25px 0 25px;
 
     &>li {
 
@@ -400,6 +403,7 @@ ol.breadcrumb {
     background-color: @dark;
     height: 100%;
     overflow: hidden;
+
 }
 
 .banner {
@@ -1555,7 +1559,9 @@ body, html, #main, .main-container {
     height:100%;
     width: 50%;
     float: left;
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 50%;
 
     img {
         margin: auto;
@@ -1578,8 +1584,13 @@ body, html, #main, .main-container {
 }
 
 .scroll-content {
-    overflow: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
     height: 100%;
+    position: absolute;
+    left: 50%;
+    right: 0;
+
 }
 .row.browse {
     padding: 150px 30px;

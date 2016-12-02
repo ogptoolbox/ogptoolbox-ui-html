@@ -156,15 +156,18 @@ a:focus {
 }
 .row.fixed {
   position: fixed;
-  z-index: 1000;
+  left: 50%;
+  right: 0;
+  padding: 0 22px;
+  margin: 0;
+  z-index: 100000;
   background: white;
-  padding-right: 30px;
 }
 ul.nav.nav-pills {
   width: 100%;
   border: 1px solid #6b7277;
   border-radius: 4px;
-  margin: 30px 0 25px;
+  margin: 25px 0 25px;
 }
 ul.nav.nav-pills > li.active a {
   background: #6b7277;
@@ -1367,7 +1370,9 @@ html,
   height: 100%;
   width: 50%;
   float: left;
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 50%;
 }
 .browse-tag img {
   margin: auto;
@@ -1386,8 +1391,12 @@ html,
   width: 100%;
 }
 .scroll-content {
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 100%;
+  position: absolute;
+  left: 50%;
+  right: 0;
 }
 .row.browse {
   padding: 150px 30px;
