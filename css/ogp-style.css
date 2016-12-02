@@ -1872,5 +1872,14 @@ aside.clients img {
   right: 0;
   bottom: 0;
 }
+h1.user-name {
+  font-size: 70px;
+  margin: 0 0 5px;
+}
+h3.user-mail {
+  font-size: 26px;
+  margin: 0 0 40px;
+  font-weight: 300;
+}
 
 /*# sourceMappingURL=ogp-style.css.map */
