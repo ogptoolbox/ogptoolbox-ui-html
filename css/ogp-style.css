@@ -164,6 +164,19 @@ a:focus {
   background: rgba(0, 0, 0, 0.4);
   border-color: rgba(0, 0, 0, 0);
 }
+.btn.btn-default.btn-action-negative {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 2px 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  margin-top: -2px;
+}
+.btn.btn-default.btn-action-negative:hover {
+  color: grey;
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.8);
+}
 .nomargin {
   padding: 0px;
 }
@@ -232,6 +245,9 @@ ul.nav.nav-pills > li > a:hover {
 .alert.alert-danger {
   background-image: none;
   background-color: #fbcdcd;
+}
+.banner-button {
+  margin-top: 15px;
 }
 nav.navbar.navbar-default {
   background-image: none;
