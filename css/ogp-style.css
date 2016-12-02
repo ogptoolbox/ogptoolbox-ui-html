@@ -151,6 +151,19 @@ a:focus {
   background: #25b5ff;
   border-color: #25b5ff;
 }
+.btn.btn-default.btn-action4 {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 2px 10px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  margin-top: -2px;
+}
+.btn.btn-default.btn-action4:hover {
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 0);
+}
 .nomargin {
   padding: 0px;
 }
@@ -1389,6 +1402,24 @@ html,
   position: absolute;
   bottom: 30px;
   width: 100%;
+}
+.browse-tag .alert {
+  margin: auto;
+  margin-top: 150px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  z-index: 100000;
+  background-image: none;
+  background-color: #6dc795;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 10px 15px;
+  height: 46px;
+  line-height: 26px;
 }
 .scroll-content {
   overflow-y: scroll;
