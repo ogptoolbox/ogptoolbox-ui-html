@@ -1374,16 +1374,16 @@ html,
   left: 0;
   right: 50%;
 }
-.browse-tag img {
+.browse-tag .tag {
   margin: auto;
   margin-top: 150px;
   max-width: 104%;
   max-height: 100%;
   position: absolute;
   top: -6px;
-  left: -20px;
-  right: -20px;
-  bottom: 0;
+  left: 0;
+  right: 0px;
+  bottom: 40px;
 }
 .browse-tag .row.filters {
   position: absolute;
