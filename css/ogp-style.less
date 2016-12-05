@@ -1408,7 +1408,6 @@ table {
     }
     .modal-body {
         padding: 0px;
-        overflow: scroll;
         max-height: 480px;
 
         .big .form-control {
@@ -1428,8 +1427,12 @@ table {
             margin-bottom: 14px;
         }
 
-        .list-unstyled li {
-            line-height: 1.8em;
+        .list-unstyled  {
+            min-height: 155px;
+
+            li {
+                line-height: 1.8em;
+            }
         }
 
         .well {
@@ -1586,7 +1589,19 @@ table {
         }
     }
 
+    a.forgot {
+        color: grey;
 
+    &:hover {
+        color: @light-blue;
+    }
+        
+    }
+
+}
+
+#edit-overlay.modal-dialog .modal-body {
+     overflow: scroll;
 }
 
 .grey {

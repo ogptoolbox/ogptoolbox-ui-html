@@ -1246,7 +1246,6 @@ a.show-more span {
 }
 .modal-dialog .modal-body {
   padding: 0px;
-  overflow: scroll;
   max-height: 480px;
 }
 .modal-dialog .modal-body .big .form-control {
@@ -1264,6 +1263,9 @@ a.show-more span {
 }
 .modal-dialog .modal-content .lead {
   margin-bottom: 14px;
+}
+.modal-dialog .modal-content .list-unstyled {
+  min-height: 155px;
 }
 .modal-dialog .modal-content .list-unstyled li {
   line-height: 1.8em;
@@ -1398,6 +1400,15 @@ a.show-more span {
 .modal-dialog .media .media-right .btn-vote:hover {
   color: #25b5ff;
   opacity: 1;
+}
+.modal-dialog a.forgot {
+  color: grey;
+}
+.modal-dialog a.forgot:hover {
+  color: #25b5ff;
+}
+#edit-overlay.modal-dialog .modal-body {
+  overflow: scroll;
 }
 .grey {
   background-color: #f7f7f7;
