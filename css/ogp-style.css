@@ -237,6 +237,7 @@ ul.nav.nav-pills > li > a:hover {
   line-height: 26px;
   box-shadow: none;
   text-shadow: none;
+  margin-bottom: 0;
 }
 .alert.alert-success {
   background-image: none;
@@ -684,7 +685,7 @@ p.info-box {
   top: 0px;
   font-size: 80% !important;
 }
-.label-tag :hover {
+.label-tag:hover {
   background-color: #a7a7a7;
   border: 1px solid #a7a7a7;
   color: white;
@@ -768,6 +769,7 @@ h4.zone-label {
   right: 12px;
   top: 8px;
   display: none;
+  overflow: hidden;
 }
 .thumbnail:hover {
   text-decoration: none;
@@ -805,6 +807,9 @@ h4.zone-label {
   box-shadow: none;
   border-size: 0;
   border-radius: 0px;
+}
+.thumbnail.tool:hover {
+  background-color: #eaeaea;
 }
 .thumbnail.tool .visual {
   border-bottom: 1px solid #e8e8e8;
@@ -859,6 +864,12 @@ h4.zone-label {
   left: 0;
   right: 0;
   bottom: 0;
+}
+.thumbnail.example:hover {
+  background-color: #efefef;
+}
+.thumbnail.example:hover .visual {
+  border-color: #efefef;
 }
 .thumbnail.collection {
   height: 185px;
@@ -962,6 +973,12 @@ h4.zone-label {
 .thumbnail .caption h4 {
   font-size: 15px;
   margin: 3px 0 9px;
+}
+.thumbnail .caption h4 a {
+  color: #333;
+}
+.thumbnail .caption h4 a:hover {
+  color: #25b5ff;
 }
 .thumbnail .caption p {
   font-size: 12px;

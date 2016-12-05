@@ -230,6 +230,7 @@ ul.nav.nav-pills {
         line-height: 26px;
         box-shadow: none;
         text-shadow: none;
+        margin-bottom: 0;
 
         &.alert-success {
            background-image: none;
@@ -749,7 +750,7 @@ p.info-box  {
         font-size: 80% !important;
     }
 
-    :hover {
+    &:hover {
         background-color: #a7a7a7;
         border: 1px solid #a7a7a7;
         color: white;
@@ -843,6 +844,7 @@ h4.zone-label {
         right: 12px;
         top: 8px;
         display: none;
+        overflow: hidden;
     }
 
     &:hover {
@@ -881,6 +883,9 @@ h4.zone-label {
         box-shadow: none;
         border-size: 0;
         border-radius: 0px;
+            &:hover {
+                background-color: darken(@light-grey, 5%);
+            }
 
         .visual     {
             border-bottom: 1px solid #e8e8e8;
@@ -948,6 +953,13 @@ h4.zone-label {
             right: 0;
             bottom: 0;
         }
+
+        &:hover {
+                background-color: darken(@light-grey, 3%);
+                .visual {
+                border-color: darken(@light-grey, 3%);
+                }
+            }
 
     }
 
@@ -1069,6 +1081,12 @@ h4.zone-label {
     h4 {
         font-size: 15px;
         margin: 3px 0 9px;
+        a {
+            color: #333;
+            &:hover {
+            color: @light-blue;
+            }
+        }
     }
 
     p   {
