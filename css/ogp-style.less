@@ -1909,13 +1909,13 @@ header {
     color: white;
     background-color: @dark;
     .intro-text {
-            padding-top: 200px;
-            padding-bottom: 200px;
+            padding: 100px;
             .intro-lead-in {
-                font-style: italic;
+                font-style: normal;
                 font-size: 30px;
                 line-height: 40px;
                 margin-bottom: 25px;
+                font-weight: 300;
             }
             .intro-heading {
                 font-weight: 400;
@@ -1931,31 +1931,49 @@ header {
 // Global Section Styles
 
 section {
-    padding: 100px 0;
+    padding: 120px 0;
     h2.section-heading {
-        font-size: 40px;
+        font-size: 36px;
         margin-top: 0;
         margin-bottom: 10px;
-        font-weight: 600;
+        font-weight: 4300;
+        color: #333;
     }
     h3.section-subheading {
         font-size: 18px;
-        ;
         text-transform: none;
         font-style: italic;
-        font-weight: 400;
+        font-weight: 300;
         margin-bottom: 75px;
     }
     p {
         margin-top: 15px;
         font-size: 17px;
         line-height: 1.75;
+        font-weight: 300;
+    }
+    ul {
+        margin: 10px 0;
+        font-size: 17px;
+        line-height: 1.75;
+        font-weight: 300;
     }
 }
 
-@media(min-width:768px) {
-    section {
-        padding: 150px 0;
+section#mentions {
+    padding: 60px 0 0px;
+    h2.section-heading {
+        font-size: 22px;
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-weight: 4300;
+        color: #333;
+    }
+    p {
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 1.75;
+        font-weight: 300;
     }
 }
 
@@ -1964,12 +1982,13 @@ section {
 .service-heading {
     margin: 15px 0;
     text-transform: none;
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #333;
 }
 .service-text {
-    margin: 15px 30px 50px;
-    font-weight: 400;
+    margin: 15px 15px 50px;
+    font-weight: 300;
     font-size: 16px;
     line-height: 1.5em;
 }
@@ -2166,6 +2185,8 @@ section {
 // Clients Aside
 
 aside.clients {
+    margin-top: 60px;
+
     a {
     height: 140px;
     display: block;
