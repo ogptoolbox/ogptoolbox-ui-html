@@ -217,6 +217,9 @@ ul.nav.nav-pills > li > a {
 ul.nav.nav-pills > li > a:last-of-type {
   border-right: none;
 }
+ul.nav.nav-pills > li > a:first-of-type {
+  border-left: none;
+}
 ul.nav.nav-pills > li > a .badge {
   background: none;
   color: grey;
