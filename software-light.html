@@ -482,13 +482,27 @@
 								</ul>
 
 								<nav class="navbar-fixed-bottom grey">
-									<form class="navbar-form navbar-left big">
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="vote the best version or add your own">
-										</div>
-										<div class="navbar-right">
-											<button type="submit" class="btn btn-default">Publish</button>
-										</div>
+									<form>
+									  <div class="row big">
+										    <div class="col-sm-9">
+										      <select class="form-control">
+												  <option>Input text</option>
+												  <option>2</option>
+												  <option>3</option>
+												  <option>4</option>
+												  <option>5</option>
+											  </select>
+										    </div>
+									  </div>
+									  <div class="row big">
+									  	<div class="col-sm-9">
+										      <textarea  class="form-control" data-autoresize row="1" placeholder="vote the best version or add your own"></textarea>
+										    </div>
+										    <div class="col-sm-3">
+												<button type="submit" class="btn btn-default btn-block">Publish</button>
+											</div>
+									  	
+									  </div>
 									</form>
 
 
@@ -559,6 +573,19 @@
 
 <script src="js/main.js"></script>
 
+<script type="text/javascript">
+
+ // Text area resize
+ jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+  var offset = this.offsetHeight - this.clientHeight;
+
+  var resizeTextarea = function(el) {
+    jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+  };
+  jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
+});
+
+</script>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
 (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
