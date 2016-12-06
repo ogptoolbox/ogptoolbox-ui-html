@@ -519,6 +519,9 @@ ol.breadcrumb {
 .row.footer .footer-menu li a {
   color: #858585;
 }
+.row.footer .footer-menu li a:hover {
+  color: white;
+}
 .row.footer .footer-logo {
   width: 126px;
   margin-bottom: 15px;
@@ -546,6 +549,7 @@ p.info-box {
   box-shadow: none;
   font-weight: 300px;
   font-size: 12px;
+  margin: 0 !important;
 }
 .dropdown-language .dropdown-toggle span.caret {
   float: right;
@@ -793,6 +797,7 @@ h4.zone-label {
 .thumbnail.orga .visual img {
   height: auto;
   width: auto;
+  min-width: auto;
   max-height: 55%;
   max-width: 55%;
   position: absolute;
@@ -936,12 +941,16 @@ h4.zone-label {
   overflow: hidden;
   vertical-align: middle;
   text-align: center;
-  background: black;
+  background: #d8d8d8;
   position: relative;
+  border-bottom: 1px solid #e8e8e8;
 }
 .thumbnail .visual img {
-  width: 100%;
-  opacity: 0.9;
+  min-width: 100%;
+  max-height: 160%;
+  height: auto;
+  width: auto;
+  opacity: 0.85;
 }
 .thumbnail .example-author-thumb {
   height: 54px;
