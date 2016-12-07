@@ -745,11 +745,15 @@ div.metrics .metric-label {
   font-size: 13px;
   font-weight: 300;
 }
-div.metrics h3 {
+div.metrics a {
   font-size: 26px;
   font-weight: 400;
   margin: 3px 0 4px;
   color: #3f454a;
+  display: block;
+}
+div.metrics a:hover {
+  color: #25b5ff;
 }
 h3.zone-label {
   font-size: 23px;
@@ -828,6 +832,9 @@ h4.zone-label {
 .thumbnail.tool:hover {
   background-color: #eaeaea;
 }
+.thumbnail.tool:hover .visual {
+  opacity: 0.8;
+}
 .thumbnail.tool .visual {
   border-bottom: 1px solid #e8e8e8;
 }
@@ -852,6 +859,7 @@ h4.zone-label {
 }
 .thumbnail.tool.grey:hover .visual {
   border-color: #efefef;
+  opacity: 0.5;
 }
 .thumbnail.tool.grey .visual {
   border: 3px solid #f7f7f7;
@@ -887,6 +895,7 @@ h4.zone-label {
 }
 .thumbnail.example:hover .visual {
   border-color: #efefef;
+  opacity: 0.5;
 }
 .thumbnail.collection {
   height: 185px;
