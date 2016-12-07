@@ -1117,6 +1117,10 @@ a.show-more span {
 .list .thumbnail:hover {
   background: #f7f7f7;
 }
+.list .thumbnail.tool .visual h1.dynamic {
+  font-size: 50px;
+  line-height: 52px;
+}
 .list .thumbnail.tool .caption p {
   margin-top: 8px;
   margin-bottom: 20px;
@@ -1438,7 +1442,9 @@ a.show-more span {
   cursor: pointer;
   text-align: center;
 }
-.modal-dialog .media .media-right .btn-vote:hover {
+.modal-dialog .media .media-right .btn-vote:hover,
+.modal-dialog .media .media-right .btn-vote:active,
+.modal-dialog .media .media-right .btn-vote:visited {
   color: #25b5ff;
   opacity: 1;
 }
@@ -1453,6 +1459,12 @@ a.show-more span {
 }
 .grey {
   background-color: #f7f7f7;
+}
+.modal {
+  z-index: 1000050;
+}
+.modal-backdrop {
+  z-index: 1000040;
 }
 body,
 html,
